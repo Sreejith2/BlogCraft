@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs') %>
+    <div class="bg-gradient-to-br from-slate-600 to bg-slate-300 flex flex-col flex-grow items-center justify-center">
+        <div class="bg-white flex flex-col w-[950px] my-5 p-4 rounded-lg">
+             <h1 class="font-[700] text-center text-2xl my-3"><%= post.title %></h1>
+             <p class="font-serif font-[450]"><%= post.content%></p>
+        </div>
+        <div class="flex flex-row w-[900px] m-3 items-center justify-evenly">
+            <form action="/edit/<%=post.id%>" method="get">
+                <button class="bg-blue-400 w-24 h-9 rounded-lg font-semibold" type="submit">Edit</button>
+            </form>
+            <form action="/delete/<%=post.id%>" method="GET">
+                <button class="bg-blue-400 w-24 h-9 rounded-lg font-semibold" type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+<%- include('partials/footer.ejs') %>

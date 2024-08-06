@@ -1,0 +1,9 @@
+<%- include('partials/header.ejs') %>
+    <div class="bg-gradient-to-br from-slate-600 to bg-slate-300 flex flex-col flex-grow items-center justify-center">
+        <form class="flex flex-col items-center justify-center gap-3 mt-4" action="/update-blog/<%=post.id%>" method="post">
+            <input class="w-[900px] h-12 p-3" name="blogHeading" type="text" value="<%=post.title%>">
+            <textarea class="w-[900px] h-[350px] p-3" name="blogContent" type="text"><%=post.content%></textarea>
+            <button class="bg-blue-400 w-24 h-9 rounded-lg font-semibold m-3" type="submit">Update</button>
+        </form>
+    </div>
+<%- include('partials/footer.ejs') %>
